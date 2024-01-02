@@ -37,10 +37,14 @@ export default function SignIn() {
   })
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
+  function onSubmit(values: z.infer<typeof formSchema>, event: any) {
+    event.preventDefault()
     console.log(values)
+    fetch("/api/register", {
+      method: "POST",
+      body: JSON.stringify(values),
+      headers: { "Content-Type": "application/json" },
+    })
   }
 
   return (
