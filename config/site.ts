@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: "Floreria",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "Easy to use, custom and order flowers online. We have a wide variety of flowers for all occasions. We deliver to your home or office.",
   mainNav: [
     {
       title: "Register",
